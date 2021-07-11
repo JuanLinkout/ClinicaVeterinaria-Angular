@@ -1,0 +1,35 @@
+<mat-card class="login mat-elevation-z3">
+  <div class="login-card">
+    <mat-card-title class="title">Login</mat-card-title>
+  
+    <mat-form-field appearance="outline" class="login-form-input">
+      <mat-label>E-mail</mat-label>
+      <input [(ngModel)]="userInfo.email" matInput placeholder="E-mail">
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline" class="login-form-input">
+      <mat-label>Senha</mat-label>
+      <input [(ngModel)]="userInfo.password" matInput placeholder="Senha" [type]="'password'">
+    </mat-form-field>
+    <div class="register-button-container">
+      <a routerLink="/register" class="register-button">
+        Cadastrar-se
+      </a>
+    </div>
+  
+    <div class="button-container">
+      <div class="login-button" *ngIf="!loading">
+        <button (click)="handleLoginButtonClick()" mat-raised-button color="primary" >
+          Entrar
+        </button>
+      </div>
+      <mat-progress-spinner
+        *ngIf="loading"
+        diameter="30"
+        color="white"
+        mode="indeterminate"
+      >
+      </mat-progress-spinner>
+    </div>
+  </div>
+</mat-card>

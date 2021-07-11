@@ -1,0 +1,46 @@
+.register {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 30px);
+}
+
+.login-card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-button-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.register-button {
+  text-decoration: none;
+}
+
+.login-form-input {
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.login-button {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.mat-progress-spinner::ng-deep circle {
+  stroke: purple;
+}

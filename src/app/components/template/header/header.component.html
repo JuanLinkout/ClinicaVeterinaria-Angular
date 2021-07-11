@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class="header mat-elevation-z4">
+    <div>
+      <a routerLink="/">
+        <button mat-icon-button aria-label="Example icon button with a home icon">
+            <mat-icon>pets</mat-icon>
+        </button>
+      </a>
+      <span>Clinica Veterinaria</span>
+    </div>
+    <div>
+        <button (click)="handleLoginButtonClick()" mat-raised-button >
+          <span *ngIf="!token">
+            Login
+          </span>
+        </button>
+        <button (click)="handleLogoutButtonClick()" mat-raised-button >
+          <span *ngIf="token">
+            Sair
+          </span>
+        </button>
+        
+    </div>
+</mat-toolbar>

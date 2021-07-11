@@ -1,0 +1,14 @@
+<div class="app">
+    <app-header></app-header>
+
+    <div class="content">
+        <div>
+          <app-sidenav *ngIf="token !== null"></app-sidenav>
+        </div>
+        <div class="content-body">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>

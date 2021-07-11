@@ -1,0 +1,66 @@
+.details-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 16px 0;
+}
+
+.pet-detail {
+    display: flex;
+    width: 100%;
+}
+
+.pet-image {
+    height: 270px;
+    object-fit: contain;
+}
+
+.pet-detail-card {
+    width: 100%;
+    padding: 16px;
+}
+
+.pet-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pet-form-input {
+    width: 48%;
+    padding: 8px;
+}
+
+.card-actions {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding-bottom: 16px;
+}
+
+.card-button-icon {
+    margin-left: -8px;
+    margin-right: 8px;
+}
+
+.pet-ficha {
+    display: flex;
+    margin-top: 36px;
+}
+
+.card-header {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1430px) {
+    .pet-form-input {
+        width: 40%;
+        padding: 8px;
+    }
+  }

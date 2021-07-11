@@ -1,0 +1,51 @@
+<mat-card class="details mat-elevation-z3">
+    <mat-card-title class="title">Add Pet</mat-card-title>
+    <mat-card-subtitle class="subtitle">Página para cadastrar novos pets.</mat-card-subtitle>
+    <mat-divider class="divider"></mat-divider>
+    <div class="register-pet-form">
+        <mat-form-field appearance="outline" class="pet-form-input">
+            <mat-label>Nome</mat-label>
+            <input [(ngModel)]="pet.name" matInput placeholder="Nome">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="pet-form-input">
+            <mat-label>Raça</mat-label>
+            <input [(ngModel)]="pet.breed" matInput placeholder="Raça">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="pet-form-input">
+            <mat-label>Idade</mat-label>
+            <input [(ngModel)]="pet.age" matInput placeholder="Idade">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="pet-form-input">
+            <mat-label>Peso</mat-label>
+            <input [(ngModel)]="pet.weight" matInput placeholder="Peso">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="pet-form-input">
+            <mat-label>Cor</mat-label>
+            <input [(ngModel)]="pet.color" matInput placeholder="Cor">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="pet-form-input">
+          <mat-label>Dono</mat-label>
+          <input [(ngModel)]="pet.owner" matInput placeholder="Dono">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="pet-form-input">
+          <mat-label>Url Foto</mat-label>
+          <input [(ngModel)]="pet.petPhotoUrl" matInput placeholder="Url Foto">
+        </mat-form-field>
+
+        <mat-form-field class="pet-form-input" appearance="outline">
+          <mat-label>Descrição</mat-label>
+          <textarea [(ngModel)]="pet.description" matInput></textarea>
+        </mat-form-field>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+    <mat-card-actions class="card-actions">
+        <button (click)="handleResetInput()" mat-raised-button ><mat-icon class="card-button-icon">clear</mat-icon>Limpar</button>
+        <button (click)="createPet()" mat-raised-button color="primary" disabled={{loading}}><mat-icon class="card-button-icon">save</mat-icon>Salvar</button>
+    </mat-card-actions>
+</mat-card>

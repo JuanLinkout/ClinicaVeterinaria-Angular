@@ -1,0 +1,43 @@
+<mat-card class="home mat-elevation-z3">
+    <div class="card-header">
+      <div>
+        <mat-card-title class="title">Pets</mat-card-title>
+        <mat-card-subtitle class="subtitle">Página com todos os pets cadastrados.</mat-card-subtitle>
+      </div>
+      <div class="add-button">
+        <a routerLink="/pets/create">
+          <button mat-fab color="primary">
+            <mat-icon>add</mat-icon>
+          </button>
+        </a>
+      </div>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+    <div class="pets-content">
+        <mat-progress-spinner
+          *ngIf="loading"
+          diameter="80"
+          color="white"
+          mode="indeterminate"
+        ></mat-progress-spinner>
+        <h2 class="display-message" *ngIf="displayMessage">{{displayMessage}}</h2>
+        <div class="card-container" *ngIf="!loading && !displayMessage">
+          <mat-card class="example-card mat-elevation-z4" *ngFor="let pet of pets" id={{pet.id}}>
+              <mat-card-header>
+                <mat-card-title>{{pet.name}}</mat-card-title>
+                <mat-card-subtitle>{{pet.breed}}</mat-card-subtitle>
+              </mat-card-header>
+              <img class="card-image" mat-card-image src={{pet.petPhotoUrl}} alt="petPhotoUrl of a Shiba Inu">
+              <mat-card-content class="card-content">
+                {{pet.description}}
+              </mat-card-content>
+              <mat-card-actions>
+                <a routerLink="/pets/details/{{pet.id}}">
+                  <button mat-raised-button color="primary"><mat-icon class="card-button-icon">mode_edit</mat-icon>Edit</button>
+                </a>
+                <button (click)="deletePet(pet.id)" mat-raised-button color="warn"><mat-icon class="card-button-icon">delete</mat-icon>Delete</button>
+              </mat-card-actions>
+          </mat-card>
+        </div>
+    </div>
+</mat-card>
